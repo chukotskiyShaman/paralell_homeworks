@@ -1,0 +1,1 @@
+/opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/bin/nvc++ CMakeFiles/linearV1.dir/linear_eq1.cpp.o -o linearV1 
