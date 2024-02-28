@@ -73,7 +73,7 @@ double integrate_omp(double (*func)(double), double a, double b, int n)
     double sum = 0.0;
     // std::cout<<"Num threads: "<<num_threads<<std::endl;
 
-#pragma omp parallel num_threads(10)
+#pragma omp parallel num_threads(num_threads)
     {
         int nthreads = omp_get_num_threads();
         int threadid = omp_get_thread_num();
@@ -107,15 +107,15 @@ double run_parallel()
     return (end-start);
 }
 
-int main(){//int argc, char **argv
-    // num_threads = 2;
+int main(int argc, char **argv){
+    num_threads = 2;
     // std::cout << "CPU Info: \n" << getCPUInfo() <<std::endl;
     // std::cout << "Server Name:\n" << getServerName() << std::endl;
     // std::cout << "NUMA Nodes:\n" << getNumaNodes() << std::endl;
     // std::cout << "OS Info:\n" << getOSInfo() << std::endl;
-    // if(argc == 2){
-    //     num_threads = atoi(argv[1]);
-    // }
+    if(argc == 2){
+        num_threads = atoi(argv[1]);
+    }
 
     printf("Integration f(x) on [%.12f, %.12f], nsteps = %d\n", a, b, nsteps);
     double tserial = run_serial();

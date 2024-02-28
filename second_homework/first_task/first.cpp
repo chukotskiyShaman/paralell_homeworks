@@ -5,19 +5,21 @@
 #include <omp.h>
 #include <time.h>
 
-std::string executeCommand(const std::string& command){
-    std::string result;
-    char buffer[128];
-    FILE* pipe = popen(command.c_str(), "r");
-    if(pipe){
-        while(!feof(pipe)){
-            if(fgets(buffer, 128, pipe) != nullptr)
-                result += buffer;
-        }
-        pclose(pipe);
-    }
-    return result;
-}
+int num_threads = 2;
+
+// std::string executeCommand(const std::string& command){
+//     std::string result;
+//     char buffer[128];
+//     FILE* pipe = popen(command.c_str(), "r");
+//     if(pipe){
+//         while(!feof(pipe)){
+//             if(fgets(buffer, 128, pipe) != nullptr)
+//                 result += buffer;
+//         }
+//         pclose(pipe);
+//     }
+//     return result;
+// }
 
 double cpuSecond()
 {
@@ -26,21 +28,21 @@ double cpuSecond()
     return ((double)ts.tv_sec + (double)ts.tv_nsec * 1.e-9);
 }
 
-std::string getCPUInfo(){
-    return executeCommand("lscpu");
-}
+// std::string getCPUInfo(){
+//     return executeCommand("lscpu");
+// }
 
-std::string getServerName(){
-    return executeCommand("cat /sys/devices/virtual/dmi/id/product_name");
-}
+// std::string getServerName(){
+//     return executeCommand("cat /sys/devices/virtual/dmi/id/product_name");
+// }
 
-std::string getNumaNodes(){
-    return executeCommand("numactl --hardware");
-}
+// std::string getNumaNodes(){
+//     return executeCommand("numactl --hardware");
+// }
 
-std::string getOSInfo(){
-    return executeCommand("cat /etc/os-release");
-}
+// std::string getOSInfo(){
+//     return executeCommand("cat /etc/os-release");
+// }
 
 void matrix_vector_product(double *a, double *b, double *c, int m, int n)
 {
@@ -54,7 +56,7 @@ void matrix_vector_product(double *a, double *b, double *c, int m, int n)
 
 void matrix_vector_product_omp(double *a, double *b, double *c, int m, int n)
 {
-#pragma omp parallel
+#pragma omp parallel num_threads(num_threads)
     {
         int nthreads = omp_get_num_threads();
         int threadid = omp_get_thread_num();
@@ -121,7 +123,7 @@ void run_parallel(size_t n, size_t m)
         printf("Ошибка при выделении памяти!\n");
         exit(1);
     }
-
+    // std::cout << num_threads << std::endl;
     #pragma omp parallel for num_threads(num_threads)
     for (int i = 0; i < m; i++)
     {
@@ -144,12 +146,11 @@ void run_parallel(size_t n, size_t m)
 }
 
 int main(int argc, char *argv[]){
-    std::cout << "CPU Info: \n" << getCPUInfo() <<std::endl;
-    std::cout << "Server Name:\n" << getServerName() << std::endl;
-    std::cout << "NUMA Nodes:\n" << getNumaNodes() << std::endl;
-    std::cout << "OS Info:\n" << getOSInfo() << std::endl;
+    // std::cout << "CPU Info: \n" << getCPUInfo() <<std::endl;
+    // std::cout << "Server Name:\n" << getServerName() << std::endl;
+    // std::cout << "NUMA Nodes:\n" << getNumaNodes() << std::endl;
+    // std::cout << "OS Info:\n" << getOSInfo() << std::endl;
 
-    int num_threads = 2;
     size_t M = 1000;
     size_t N = 1000;
     if(argc > 1)

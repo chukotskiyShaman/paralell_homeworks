@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named task_1
+# Target rules for targets named matrix
 
 # Build rule for target.
-task_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task_1
-.PHONY : task_1
+matrix: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matrix
+.PHONY : matrix
 
 # fast build rule for target.
-task_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/build
-.PHONY : task_1/fast
+matrix/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/build
+.PHONY : matrix/fast
 
 first.o: first.cpp.o
 .PHONY : first.o
 
 # target to build an object file
 first.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/first.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/first.cpp.o
 .PHONY : first.cpp.o
 
 first.i: first.cpp.i
@@ -142,7 +142,7 @@ first.i: first.cpp.i
 
 # target to preprocess a source file
 first.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/first.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/first.cpp.i
 .PHONY : first.cpp.i
 
 first.s: first.cpp.s
@@ -150,7 +150,7 @@ first.s: first.cpp.s
 
 # target to generate assembly for a file
 first.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/first.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/first.cpp.s
 .PHONY : first.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... task_1"
+	@echo "... matrix"
 	@echo "... first.o"
 	@echo "... first.i"
 	@echo "... first.s"

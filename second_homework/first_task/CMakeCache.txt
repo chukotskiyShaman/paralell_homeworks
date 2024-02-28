@@ -129,7 +129,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=task_1
+CMAKE_PROJECT_NAME:STATIC=matrix
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -204,6 +204,15 @@ OpenMP_C_FLAGS:STRING=-mp
 
 //C compiler libraries for OpenMP parallelization
 OpenMP_C_LIB_NAMES:STRING=
+
+//Value Computed by CMake
+matrix_BINARY_DIR:STATIC=/home/s.mendrul/paralell_homeworks/second_homework/first_task
+
+//Value Computed by CMake
+matrix_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+matrix_SOURCE_DIR:STATIC=/home/s.mendrul/paralell_homeworks/second_homework/first_task
 
 //Value Computed by CMake
 task_1_BINARY_DIR:STATIC=/home/s.mendrul/paralell_homeworks/second_homework/first_task
