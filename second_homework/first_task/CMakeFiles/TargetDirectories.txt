@@ -1,3 +1,0 @@
-/home/s.mendrul/paralell_homeworks/second_homework/first_task/CMakeFiles/matrix.dir
-/home/s.mendrul/paralell_homeworks/second_homework/first_task/CMakeFiles/edit_cache.dir
-/home/s.mendrul/paralell_homeworks/second_homework/first_task/CMakeFiles/rebuild_cache.dir
