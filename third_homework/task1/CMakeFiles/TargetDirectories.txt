@@ -1,0 +1,3 @@
+/home/s.mendrul/paralell_homeworks/third_homework/task1/CMakeFiles/task1.dir
+/home/s.mendrul/paralell_homeworks/third_homework/task1/CMakeFiles/edit_cache.dir
+/home/s.mendrul/paralell_homeworks/third_homework/task1/CMakeFiles/rebuild_cache.dir
