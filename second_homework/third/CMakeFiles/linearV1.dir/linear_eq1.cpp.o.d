@@ -2,7 +2,8 @@ CMakeFiles/linearV1.dir/linear_eq1.cpp.o : \
   /home/s.mendrul/paralell_homeworks/second_homework/third/linear_eq1.cpp \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/_cplus_macros.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/_cplus_preinclude.h \
-  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -16,10 +17,7 @@ CMakeFiles/linearV1.dir/linear_eq1.cpp.o : \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/bits/stringfwd.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/include/c++/11/bits/memoryfwd.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
@@ -216,10 +214,96 @@ CMakeFiles/linearV1.dir/linear_eq1.cpp.o : \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/bits/codecvt.h \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/cstdio \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h /usr/include/c++/11/cstdio \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/cerrno \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/iostream \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/iomanip \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/locale /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/c++/11/ctime \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/bits/unique_ptr.h \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/utility \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/math.h \
+  /usr/include/c++/11/math.h \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/cmath \
+  /usr/include/c++/11/cmath \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/limits \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/omp.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h 
