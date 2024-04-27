@@ -121,6 +121,7 @@ int main() {
             size_t id = server.add_task(task);
             // Дождитесь результата и сохраните в файл
             double result = server.request_result(id);
+            // std::cout << "client 1: " << result << std::endl;
             // Сохранение результата в файл
         }
     });
@@ -131,6 +132,7 @@ int main() {
             size_t id = server.add_task(task);
             // Дождитесь результата и сохраните в файл
             double result = server.request_result(id);
+            // std::cout << "client2: " << result << std::endl;
             // Сохранение результата в файл
         }
     });
@@ -141,6 +143,7 @@ int main() {
             size_t id = server.add_task(task);
             // Дождитесь результата и сохраните в файл
             double result = server.request_result(id);
+            // std::cout << "client3: " << result << std::endl;
             // Сохранение результата в файл
         }
     });
