@@ -1,5 +1,5 @@
-CMakeFiles/task2.dir/task2.cpp.o : \
-  /home/s.mendrul/paralell_homeworks/third_homework/task2/task2.cpp \
+CMakeFiles/test.dir/test.cpp.o : \
+  /home/s.mendrul/paralell_homeworks/third_homework/task2/test.cpp \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/_cplus_macros.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/_cplus_preinclude.h \
   /usr/include/c++/11/iostream \
@@ -237,6 +237,9 @@ CMakeFiles/task2.dir/task2.cpp.o : \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/cerrno \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/sstream \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/sstream.tcc \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/cmath \
   /usr/include/c++/11/cmath \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
@@ -294,47 +297,22 @@ CMakeFiles/task2.dir/task2.cpp.o : \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/tr1/special_function_util.h \
-  /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
-  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/opt_random.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/pmmintrin.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/emmintrin.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/xmmintrin.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/mmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/stdlib.h \
-  /usr/include/c++/11/stdlib.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/emmintrin.h \
-  /usr/include/c++/11/bits/random.tcc \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/numeric \
-  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/iomanip \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/pstl/glue_numeric_defs.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/nvhpc/pstl_config.hpp \
-  /usr/include/c++/11/future /usr/include/c++/11/mutex \
-  /usr/include/c++/11/tuple /usr/include/c++/11/utility \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+  /usr/include/c++/11/locale /usr/include/c++/11/bits/locale_facets_nonio.h \
   /usr/include/c++/11/ctime \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/parse_numbers.h \
-  /usr/include/c++/11/bits/std_mutex.h /usr/include/c++/11/bits/unique_lock.h \
-  /usr/include/c++/11/condition_variable \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/bits/unique_ptr.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/stop_token \
+  /usr/include/c++/11/utility \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/thread /usr/include/c++/11/stop_token \
   /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
@@ -367,43 +345,20 @@ CMakeFiles/task2.dir/task2.cpp.o : \
   /usr/include/x86_64-linux-gnu/asm/unistd.h \
   /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
-  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/std_mutex.h /usr/include/c++/11/bits/std_thread.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
+  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/semaphore \
+  /usr/include/c++/11/bits/semaphore_base.h \
   /usr/include/c++/11/bits/atomic_timed_wait.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/cerrno \
+  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+  /usr/include/c++/11/ctime \
+  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
+  /usr/include/c++/11/bits/parse_numbers.h /usr/include/c++/11/cerrno \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/c++/11/cerrno \
   /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/c++/11/bits/atomic_futex.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
-  /usr/include/c++/11/bits/hashtable_policy.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/unordered_map.h /usr/include/c++/11/bits/erase_if.h \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/functional \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/iomanip \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/c++/11/locale /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/c++/11/ctime \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
-  /opt/nvidia/hpc_sdk/Linux_x86_64/23.11/compilers/include/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/sstream.tcc 
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h 

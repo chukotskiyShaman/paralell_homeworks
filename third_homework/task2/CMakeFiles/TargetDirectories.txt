@@ -1,3 +1,4 @@
 /home/s.mendrul/paralell_homeworks/third_homework/task2/CMakeFiles/task2.dir
+/home/s.mendrul/paralell_homeworks/third_homework/task2/CMakeFiles/test.dir
 /home/s.mendrul/paralell_homeworks/third_homework/task2/CMakeFiles/edit_cache.dir
 /home/s.mendrul/paralell_homeworks/third_homework/task2/CMakeFiles/rebuild_cache.dir
