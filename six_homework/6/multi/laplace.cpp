@@ -4,32 +4,16 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "laplace2d.h"
+#include "laplace.h"
 #include <omp.h>
 
-#define OFFSET(x, y, m) (((x) * (m)) + (y))
+#define OFFSET(x, y, n) (((x)*(n)) + (y))
 
-Laplace::Laplace(int m, int n) : m(m), n(n){
-    A = new double[n*m];
-    Anew = new double[n*m];
-} 
-
-Laplace::~Laplace(){
-    std::ofstream out("out.txt");
-    out << std::fixed << std::steprecision(5);
-    for(int j = 0; j < n; j++){
-        for(int i = 0; i < m; i++){
-            out << std::left << std:setw(10) << A[OFFSET(j,i,m)] << " ";
-        }
-        out << std::endl;
-    }
-    delete (A);
-    delete (Anew);
-}
-
-void Laplace::initialize(){
-    memset(A, 0, n*m*sizeof(double));
-    memset(Anew, 0, n*m*sizeof(double));
+Laplace::Laplace(int n) :n(n){
+    A = new double[n * n];
+    Anew = new double[n * n];
+    memset(A, 0, n * n * sizeof(double));
+    memset(Anew, 0, n * n * sizeof(double));
 
     double corners[4] = {10, 20, 30, 20};
     A[0] = corners[0];
@@ -55,19 +39,40 @@ void Laplace::initialize(){
     }
 }
 
+
+Laplace::~Laplace(){
+    std::ofstream out("out.txt");
+    out << std::fixed << std::setprecision(5);
+    for (int j = 0; j < n; j++){
+        for (int i = 0; i < n; i++){
+            out << std::left << std::setw(10) << A[OFFSET(j, i, n)] << " ";
+        }
+        out << std::endl;
+    }
+    delete (A);
+    delete (Anew);
+}
+
+
+
 void Laplace::calcNext(){
+    double error = 0.0;
+    #pragma acc parallel loop reduction(max:error)
     for (int j = 1; j < n - 1; j++){
-        for (int i = 1; i < m - 1; i++){
-            Anew[OFFSET(j, i, m)] = 0.25 * (A[OFFSET(j, i + 1, m)] + A[OFFSET(j, i - 1, m)] + A[OFFSET(j - 1, i, m)] + A[OFFSET(j + 1, i, m)]);
+        #pragma acc loop
+        for (int i = 1; i < n - 1; i++){
+            Anew[OFFSET(j, i, n)] = 0.25 * (A[OFFSET(j, i + 1, n)] + A[OFFSET(j, i - 1, n)] + A[OFFSET(j - 1, i, n)] + A[OFFSET(j + 1, i, n)]);
         }
     }
 }
 
-double Laplace::calcError(){
+double Laplace::error_calc(){
     double error = 0.0;
+    #pragma acc parallel loop reduction(max:error)
     for (int j = 1; j < n - 1; j++){
-        for (int i = 1; i < m - 1; i++){
-            error = fmax(error, fabs(Anew[OFFSET(j, i, m)] - A[OFFSET(j, i, m)]));
+        #pragma acc loop
+        for (int i = 1; i < n - 1; i++){
+            error = fmax(error, fabs(Anew[OFFSET(j, i, n)] - A[OFFSET(j, i, n)]));
         }
     }
     return error;
