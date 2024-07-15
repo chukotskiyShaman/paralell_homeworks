@@ -15,10 +15,10 @@ int main(int argc, char** argv){
 
     po::options_description desc("Options");
     desc.add_options()
-        ("help, h", "Usage: -p - precision(0.001), size(10,16,32,1024), number of iterations(from 1 to 100000)")
-        ("precision, p", po::value<double>(&tol)->default_value(1.0e-6), "precision")
-        ("size, n", po::value<int>(&n)->default_value(128), "size")
-        ("iterations, i", po::value<int>(&iter_max)->default_value(1000000), "number of iterations");
+        ("help,h", "Usage: -p - precision(0.001), size(10,16,32,1024), number of iterations(from 1 to 100000)")
+        ("precision,p", po::value<double>(&tol)->default_value(1.0e-6), "precision")
+        ("size,n", po::value<int>(&n)->default_value(128), "size")
+        ("iterations,i", po::value<int>(&iter_max)->default_value(1000000), "number of iterations");
     po::variables_map vm;
     po::store(po::parse_command_line(argc, argv, desc), vm);
     if (vm.count("help")){std::cout << desc << '\n'; return 0;}

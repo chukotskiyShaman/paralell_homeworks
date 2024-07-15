@@ -3,8 +3,8 @@
 #include <thread>
 #include <time.h>
 
-const int N = 40000;
-const int numThreads = 40;
+const int N = 20000;
+const int numThreads = 16;
 
 std::vector<std::vector<double>> matrix(N, std::vector<double>(N));
 std::vector<double> vector(N);

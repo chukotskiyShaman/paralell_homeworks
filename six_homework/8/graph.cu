@@ -167,7 +167,7 @@ int main(int argc, char **argv)
 	// проверка занимаемой памяти для редукции
     void *d_temp_storage = d_unique_ptr_temp_storage.get();
     size_t temp_storage_bytes = 0;
-    cub::DeviceReduce::Max(d_temp_storage, temp_storage_bytes, d_Anew, d_error_ptr, m*m, stream);
+    cub::DeviceReduce::Max(d_temp_storage, temp_storage_bytes, d_Anew, d_error_ptr, m*m, stream);//вычисление размеров временного хранилища
     cudaMalloc((void**)&d_temp_storage, temp_storage_bytes);
     cudaCheck(cudaErr, "error during cudaMalloc");
 
@@ -211,7 +211,7 @@ int main(int argc, char **argv)
         if (iter % 100 == 0){
             nvtxRangePushA("calcError");
             subtractArrays<<<grid, block, 0, stream>>>(d_A, d_Anew, d_Subtract_temp, m);
-            cub::DeviceReduce::Max(d_temp_storage, temp_storage_bytes, d_Subtract_temp, d_error_ptr, m*m, stream);
+            cub::DeviceReduce::Max(d_temp_storage, temp_storage_bytes, d_Subtract_temp, d_error_ptr, m*m, stream);//вычисление максимальной ошибки
             cudaErr = cudaMemcpyAsync(&error, d_error_ptr, sizeof(double), cudaMemcpyDeviceToHost, stream);
             nvtxRangePop();
         }

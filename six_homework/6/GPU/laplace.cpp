@@ -59,26 +59,33 @@ Laplace::~Laplace(){
 
 
 void Laplace::calcNext(){
-    #pragma acc data present(A, Anew)
-    #pragma acc parallel loop independent collapse(2) vector vector_length(256) gang num_gangs(256)
-    for (int j = 1; j < n - 1; j++){
-        for (int i = 1; i < n - 1; i++){
-            Anew[OFFSET(j, i, n)] = 0.25 * (A[OFFSET(j, i + 1, n)] + A[OFFSET(j, i - 1, n)] + A[OFFSET(j - 1, i, n)] + A[OFFSET(j + 1, i, n)]);
+    // #pragma acc data present(A, Anew)
+    // #pragma acc parallel loop independent collapse(2) vector vector_length(256) gang num_gangs(256)
+    // for (int j = 1; j < n - 1; j++){
+    //     for (int i = 1; i < n - 1; i++){
+    //         Anew[OFFSET(j, i, n)] = 0.25 * (A[OFFSET(j, i + 1, n)] + A[OFFSET(j, i - 1, n)] + A[OFFSET(j - 1, i, n)] + A[OFFSET(j + 1, i, n)]);
+    //     }
+    // }
+    #pragma acc parallel loop present(A, Anew)
+        for (int j = 1; j < n  - 1; j++){
+            #pragma acc loop
+            for (int i = 1; i < n - 1; i++){
+                Anew[OFFSET(j, i, n)] = 0.25 * (A[OFFSET(j, i + 1, n)] + A[OFFSET(j, i - 1, n)] + A[OFFSET(j - 1, i, n)] + A[OFFSET(j + 1, i, n)]);
+            }
         }
-    }
 }
 
 double Laplace::error_calc(){
     double error = 0.0;
-    #pragma acc enter data copyin(error)
-    #pragma acc data present(A, Anew, error)
+    // #pragma acc enter data copyin(error)
+    #pragma acc data present(A, Anew)//, error
     #pragma acc parallel loop independent collapse(2) reduction(max : error) vector vector_length(256) gang num_gangs(256)
     for (int j = 1; j < n - 1; j++){
         for (int i = 1; i < n - 1; i++){
             error = fmax(error, fabs(Anew[OFFSET(j, i, n)] - A[OFFSET(j, i, n)]));
         }
     }
-    #pragma acc exit data copyout(error)
+    // #pragma acc exit data copyout(error)
     return error;
 }
 

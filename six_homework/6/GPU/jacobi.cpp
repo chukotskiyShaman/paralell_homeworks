@@ -1,6 +1,7 @@
 #include <iostream>
 #include "laplace.h"
 #include <chrono>
+#include <nvtx3/nvToolsExt.h>
 #include <boost/program_options.hpp>
 #include <omp.h>
 
@@ -38,16 +39,23 @@ int main(int argc, char** argv)
     Laplace A(n);
     auto start = std::chrono::high_resolution_clock::now();
     int iter = 0;
-
+    nvtxRangePushA("while");
     while ( error > tol && iter < iter_max )
     {
+        nvtxRangePushA("calc");
         A.calcNext();
+        nvtxRangePop();
         if(iter % 100 == 0){
+            nvtxRangePushA("error");
             error = A.error_calc();
+            nvtxRangePop();
         }
+        nvtxRangePushA("swap");
         A.swap();
+        nvtxRangePop();
         iter++;
     }
+    nvtxRangePop();
 
     auto end = std::chrono::high_resolution_clock::now();
     auto spent_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
